@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="./assets/style.css" rel="stylesheet">
     <title>ایگوانا</title>
 </head>
@@ -19,7 +20,14 @@
                 <h1>
                     وبسایت کسب و کار شما
                     <br />
-                    شاهکاری از <span>خلاقیت</span>
+                    شاهکار از
+                    <span class="words">
+                        <span class="word">خلاقیت</span>
+                        <span class="word">نوآوری</span>
+                        <span class="word">تکامل</span>
+                        <span class="word">پیشرفت</span>
+                        <span class="word">خلاقیت</span>
+                    </span>
                 </h1>
                 <div class="description">
                     در ایگوانیفای، ما طراحی وب را به یک هنر تبدیل می‌کنیم؛ ترکیبی از خلاقیت، تکنولوژی پیشرفته و تجربه
@@ -30,6 +38,27 @@
                 </div>
                 <a href="#" class="IG-button">مشاوره رایگان بگیرید</a>
             </div>
+        </div>
+        <div class="wrapper-background">
+            <div class="gradient-bg">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+                <div class="gradients-container">
+                    <div class="g1"></div>
+                    <div class="g4"></div>
+                    <div class="g5"></div>
+                    <div class="interactive"></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -46,17 +75,455 @@
             <h2 class="title">
                 چرا Iguanify ؟ طراحی نوین، الهام از طبیعت
             </h2>
-            <p>
-                از انعطاف‌پذیری ایگوانا تا دنیای دیجیتال، جایی که طراحی و عملکرد در هماهنگی کامل‌اند. در ایگوانیفای، هر
-                وب‌سایت یک موجود زنده است سازگار با تغییرات، خلاق در هویت و همیشه در حال رشد. ما با ترکیب هنر و فناوری،
-                حضوری دیجیتال خلق می‌کنیم که نه‌تنها زیبا، بلکه هوشمند و تأثیرگذار باشد.
+            <p id="animated-paragraph-color">
+                از انعطاف‌پذیری ایگوانا تا دنیای دیجیتال، جایی که طراحی و عملکرددر هماهنگی کامل‌اند. در ایگوانیفای، هر
+                وب‌سایت یک موجود زنده است سازگار با تغییرات، خلاق در هویت و همیشه در حال رشد. ما با ترکیب هنر و فناوری
+                حضوری دیجیتالخلق می‌کنیم که نه‌تنها زیبا، بلکه هوشمندو تأثیرگذار باشد.
             </p>
         </div>
     </section>
 
 
+    <section id="service" class="IG-mb-section">
+        <div class="container">
+            <div class="services-section">
+                <div class="left">
+                    <div class="service" data-animation="assets/animations/anim1.json">
+                        <div class="title">
+                            وب‌سایتی سفارشی که در حافظه می‌ماند
+                        </div>
+                        <div class="description">
+                            هر برند داستان و نیازهای منحصربه‌فردی دارد. در ایگوانیفای، ما با درک عمیق از هویت برند شما،
+                            وب‌سایت‌هایی سفارشی و اختصاصی طراحی می‌کنیم که به‌طور کامل با اهداف و ارزش‌های شما همخوانی
+                            داشته باشد.
+                        </div>
+                    </div>
+                    <div class="service" data-animation="assets/animations/anim2.json">
+                        <div class="title">
+                            طراحی وب‌سایت با وردپرس
+                        </div>
+                        <div class="description">
+                            وردپرس به‌عنوان یکی از محبوب‌ترین سیستم‌های مدیریت محتوا، امکان ایجاد وب‌سایت‌هایی با
+                            قابلیت‌های گسترده و مدیریت آسان را فراهم می‌کند. در ایگوانیفای، ما با بهره‌گیری از تخصص خود
+                            در این پلتفرم، وب‌سایت‌هایی را طراحی می‌کنیم که نه‌تنها زیبا و کاربرپسند هستند، بلکه
+                            به‌راحتی توسط شما قابل مدیریت و به‌روزرسانی می‌باشند.
+                        </div>
+                    </div>
+                    <div class="service" data-animation="assets/animations/anim3.json">
+                        <div class="title">
+                            پشتیبانی همیشگی و انجام تغییرات
+                        </div>
+                        <div class="description">
+                            وردپرس به‌عنوان یکی از محبوب‌ترین سیستم‌های مدیریت محتوا، امکان ایجاد وب‌سایت‌هایی با
+                            قابلیت‌های گسترده و مدیریت آسان را فراهم می‌کند. در ایگوانیفای، ما با بهره‌گیری از تخصص خود
+                            در این پلتفرم، وب‌سایت‌هایی را طراحی می‌کنیم که نه‌تنها زیبا و کاربرپسند هستند، بلکه
+                            به‌راحتی توسط شما قابل مدیریت و به‌روزرسانی می‌باشند.
+                        </div>
+                    </div>
+                    <div class="service" data-animation="assets/animations/anim4.json">
+                        <div class="title">
+                            طراحی صفحه فرود (لندینگ پیج)
+                        </div>
+                        <div class="description">
+                            صفحات فرود نقش کلیدی در جذب و تبدیل بازدیدکنندگان به مشتریان دارند. ما در ایگوانیفای، با
+                            طراحی صفحات فرود جذاب و بهینه‌سازی‌شده، تجربه‌ای بی‌نظیر را برای کاربران فراهم می‌کنیم که
+                            منجر به افزایش نرخ تبدیل و دستیابی به اهداف بازاریابی شما می‌شود.
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image-wrapper">
+                        <div id="lottie-player" class="lottie-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+    <section id="otherServices" class="IG-mb-section">
+        <div class="what-we-do">
+            <div class="background-slide" id="bg-slide"></div>
+
+            <div class="service-item" data-index="0">
+                <div class="service-title">Design</div>
+                <div class="service-details">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>UI/UX</li>
+                        <li>Branding</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item" data-index="1">
+                <div class="service-title">Development</div>
+                <div class="service-details">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Web Apps</li>
+                        <li>Frontend & Backend</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item" data-index="2">
+                <div class="service-title">Marketing</div>
+                <div class="service-details">
+                    <h3>Marketing</h3>
+                    <ul>
+                        <li>SEO</li>
+                        <li>Social Media</li>
+                        <li>Content</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item" data-index="3">
+                <div class="service-title">Strategy</div>
+                <div class="service-details">
+                    <h3>Strategy</h3>
+                    <ul>
+                        <li>Growth Hacking</li>
+                        <li>Analytics</li>
+                        <li>Consulting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item" data-index="4">
+                <div class="service-title">Support</div>
+                <div class="service-details">
+                    <h3>Support</h3>
+                    <ul>
+                        <li>Maintenance</li>
+                        <li>Help Desk</li>
+                        <li>Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="allPortfolio" class="IG-mb-section">
+        <div class="container">
+            <div class="title">
+                نمونه‌کارها، جلوه‌ای از خلاقیت و تخصص
+            </div>
+            <div class="description">
+                هر پروژه، داستانی از ایده تا اجرا. در اینجا، کیفیت و نوآوری را در عمل ببینید.
+            </div>
+        </div>
+        <div class="swiper" dir="ltr">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/images/portfolio.jpg" alt="Slide 1" />
+                    <div class="content">
+                        <div class="content-title">نمونه اجرایی سایت فروشگاهی</div>
+                        <div class="content-subtitle">نمونه اجرایی سایت فروشگاهی</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/images/portfolio.jpg" alt="Slide 2" />
+                    <div class="content">
+                        <div class="content-title">نمونه اجرایی سایت فروشگاهی</div>
+                        <div class="content-subtitle">نمونه اجرایی سایت فروشگاهی</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/images/portfolio.jpg" alt="Slide 3" />
+                    <div class="content">
+                        <div class="content-title">نمونه اجرایی سایت فروشگاهی</div>
+                        <div class="content-subtitle">نمونه اجرایی سایت فروشگاهی</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="action">
+            <a href="#" class="IG-button">
+                مشاهده همه نمونه کارها
+            </a>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <div class="title">
+                سرمایه‌گذاری در کسب‌وکار دیجیتال
+            </div>
+            <div class="description">
+                انتخابی هوشمندانه کسب و کارها برای رشد
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="title">پلن پایه</div>
+                        <div class="price">۷ تا ۹ میلیون</div>
+                        <div class="action">
+                            <a href="#" class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">همین حالا اقدام کنید</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                قالب استاندارد و سفارشی‌سازی‌شده
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                ریسپانسیو (سازگاری با موبایل و تبلت)
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                صفحات اصلی (خانه، درباره ما و...)
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                هاست و دامنه یک‌ساله
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                پشتیبانی ۳ ماهه
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="title">پلن فروشگاهی حرفه‌ای</div>
+                        <div class="price">۱۵ تا ۲۱ میلیون</div>
+                        <div class="action">
+                            <a href="#" class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">همین حالا اقدام کنید</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                تمام امکانات پلن فروشگاهی ساده
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                امتیازدهی به محصولات
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                فیلتر محصولات بر اساس ویژگی‌ها
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                مگامنو حرفه‌ای
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                خبرنامه و ایمیل مارکتینگ
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                کوپن تخفیف و سیستم پیشنهادات ویژه
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="title">پلن پایه</div>
+                        <div class="price">۷ تا ۹ میلیون</div>
+                        <div class="action">
+                            <a href="#" class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">همین حالا اقدام کنید</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                تمام امکانات پلن پایه
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                امکان ثبت محصولات نامحدود
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                دسته‌بندی محصولات
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                سبد خرید و درگاه پرداخت بانکی
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                لیست علاقه‌مندی‌ها
+                            </li>
+                            <li>
+                                <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                سیستم مدیریت کاربران و مشتریان
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card card-special">
+                        <div class="row w-100">
+                            <div class="col-12 col-sm-12 col-lg-2"></div>
+                            <div class="col-12 col-sm-12 col-lg-4">
+                                <div class="title">پلن فروشگاهی حرفه‌ای</div>
+                                <div class="price">۱۵ تا ۲۱ میلیون</div>
+                                <div class="action">
+                                    <a href="#" class="animated-button">
+                                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                            </path>
+                                        </svg>
+                                        <span class="text">همین حالا اقدام کنید</span>
+                                        <span class="circle"></span>
+                                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-lg-6">
+                                <ul>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        تمام امکانات پلن فروشگاهی ساده
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        امتیازدهی به محصولات
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        فیلتر محصولات بر اساس ویژگی‌ها
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        مگامنو حرفه‌ای
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        خبرنامه و ایمیل مارکتینگ
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/check_circle.svg" alt="check_circle" loading="lazy" />
+                                        کوپن تخفیف و سیستم پیشنهادات ویژه
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <img class="line" src="./assets/images/line.svg" alt="line" loading="lazy" />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="title">لینک‌ها</div>
+                    <ul>
+                        <li><a href="#">بلاگ</a></li>
+                        <li><a href="#">درباره‌ما</a></li>
+                        <li><a href="#">نمونه کارها</a></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="footer-slugen">
+                        ما به رشد کسب‌و‌کار شما کمک می‌کنیم
+                    </div>
+                    <div class="footer-under-slugen">
+                        در ایگوانیفای، فراتر از طراحی وب‌سایت عمل می‌کنیم. ما بستر دیجیتالی شما را می‌سازیم تا
+                        کسب‌وکارتان رشد کند و دیده شود. با ترکیب طراحی چشم‌نواز، تجربه کاربری بهینه و استراتژی‌های
+                        دیجیتال، حضوری ماندگار برای برند شما خلق می‌کنیم.
+                    </div>
+                    <div class="footer-logo">
+                        <img src="./assets/images/IGUANIFY.svg" alt="Iguanify" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
     <script src="./assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/my.js"></script>
+    <script>
+        const swiper = new Swiper("#allPortfolio .swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 200,
+            centeredSlides: true,
+            rtl: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            grabCursor: true,
+        });
+    </script>
 </body>
 
 </html>
