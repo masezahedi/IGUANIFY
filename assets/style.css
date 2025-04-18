@@ -149,7 +149,7 @@ header {
   height: 100%;
   padding-left: 6px;
   color: var(--text-secondary);
-  animation: spin_4991 4s infinite;
+  animation: spin_4991 8s infinite;
 }
 
 @keyframes spin_4991 {
