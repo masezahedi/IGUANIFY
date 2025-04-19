@@ -478,7 +478,7 @@ header {
 
 .service {
   font-size: 28px;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
   opacity: 0;
   transform: translateY(30px);
   height: 60vh;
@@ -503,7 +503,7 @@ header {
 
 .what-we-do {
   display: flex;
-  height: 100vh;
+  height: 500px;
   position: relative;
   overflow: hidden;
 }
@@ -527,6 +527,11 @@ header {
   transition: opacity 0.3s ease;
   z-index: 2;
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-details {
@@ -569,6 +574,113 @@ header {
 
 .service-item.active .service-details {
   opacity: 1;
+}
+
+/*** #SERVICE ***/
+#service .title {
+  text-align: right;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#service .description {
+  text-align: right;
+  margin-bottom: 64px;
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#service .services-section .left {
+  padding-top: 400px;
+
+  .service {
+    position: relative;
+    padding-right: 50px;
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      border-radius: 50px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 16px;
+      opacity: 1 !important;
+    }
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      right: 11px;
+      top: 16px;
+      opacity: 1 !important;
+    }
+
+    .number {
+      color: var(--text-secondary);
+      font-size: 25px;
+      font-weight: 500;
+      line-height: normal;
+      position: absolute;
+      top: -35px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: right;
+    }
+    .description {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: right;
+    }
+  }
+}
+
+#service .services-section .left .service:last-child::before {
+  display: none;
+}
+
+/*** otherServices ***/
+#otherServices .title {
+  text-align: right;
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); */
+  font-size: 60px;
+  font-weight: 950;
+  line-height: 80px;
+  /* background: linear-gradient(
+    233deg,
+    #0f172a -24.33%,
+    #1e293b -5.51%,
+    #037d8d 15.73%,
+    #028090 37.76%,
+    #00a896 54.15%,
+    #a7e22e 85.29%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+#otherServices .description {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 /*********** ALL PORTFOLIO *************/
