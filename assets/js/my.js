@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .map((word) => `<span class="fade-word">${word}</span>`)
     .join(" ");
 
-  gsap.set(".fade-word", { color: "#888" });
+  gsap.set(".fade-word", { color: "#383838" });
 
   let tl = gsap.timeline({
     scrollTrigger: {
