@@ -1,18 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // کدهای مربوط به انیمیشن متن
   const paragraph = document.querySelector("#animated-paragraph-color");
-  const words = paragraph.textContent.trim().split(" ");
 
-  paragraph.innerHTML = words
-    .map((word) => `<span class="fade-word">${word}</span>`)
-    .join(" ");
+  // گام 1: تبدیل متن به span برای هر کلمه
+  const childNodes = Array.from(paragraph.childNodes);
+  const newContent = [];
 
+  childNodes.forEach((node) => {
+    if (node.nodeType === 3) {
+      // متن ساده → به spanهای جداگانه
+      const words = node.textContent.trim().split(/\s+/);
+      words.forEach((word, i) => {
+        if (word !== "") {
+          const span = document.createElement("span");
+          span.className = "fade-word";
+          span.textContent = word;
+          newContent.push(span);
+          newContent.push(document.createTextNode(" "));
+        }
+      });
+    } else {
+      // اگر تصویر یا تگ دیگه بود → نگه‌دار
+      newContent.push(node);
+    }
+  });
+
+  // پاک کردن محتوای قبلی و اضافه کردن جدید
+  paragraph.innerHTML = "";
+  newContent.forEach((el) => paragraph.appendChild(el));
+
+  // گام 2: تنظیم رنگ اولیه کلمات
   gsap.set(".fade-word", { color: "#383838" });
+
+  const words = document.querySelectorAll(".fade-word");
+  const images = paragraph.querySelectorAll(".fade-img");
+
+  // گام 3: ساخت تایم‌لاین GSAP
+  const viewportHeight = window.innerHeight;
+  const offset = viewportHeight * 0.6;
 
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#why",
-      start: "top center+800",
+      start: `top center-=${offset}`,
       end: "+=2000",
       scrub: 1,
       pin: true,
@@ -20,10 +49,30 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  tl.to(".fade-word", {
+  // گام 4: انیمیشن رنگ کلمات
+  tl.to(words, {
     color: "#fff",
     stagger: 0.1,
     ease: "none",
+    onUpdate: function () {
+      const progress = this.progress();
+      const currentWordIndex = Math.floor(progress * words.length);
+
+      // به ازای هر عکس، بررسی کن که باید ظاهر بشه یا نه
+      // فرض: عکس اول بعد از کلمه 12، دومی بعد از 24، سومی بعد از 36 مثلا
+      const triggerIndexes = [11, 42, 49];
+
+      triggerIndexes.forEach((triggerIndex, i) => {
+        const img = images[i];
+        if (!img) return;
+
+        if (currentWordIndex >= triggerIndex) {
+          img.classList.add("visible");
+        } else {
+          img.classList.remove("visible");
+        }
+      });
+    },
   });
 
   // کدهای مربوط به لوتی
