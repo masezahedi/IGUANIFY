@@ -50,7 +50,7 @@
 
   /* رنگ‌های پس‌زمینه */
   --background-light: #ffffff; /* سفید برای پس‌زمینه روشن */
-  --background-dark: #121111; /* تیره برای پس‌زمینه تیره */
+  --background-dark: #000; /* تیره برای پس‌زمینه تیره */
   --background-secondary: #263238; /* خاکستری خیلی روشن */
 
   /* رنگ‌های متنی */
@@ -442,7 +442,7 @@ header {
 
 .fade-word {
   opacity: 1;
-  transition: color 0.3s ease;
+  /* transition: color 0.3s ease; */
 }
 
 .fade-img {
@@ -468,6 +468,16 @@ header {
 
 .left {
   flex: 1;
+  position: relative;
+}
+
+.left-line {
+  position: absolute;
+  right: 11px;
+  top: 426px;
+  width: 2px;
+  height: calc(100% - 1000px);
+  background-color: #fff;
 }
 
 .service {
@@ -588,8 +598,12 @@ header {
   line-height: normal;
 }
 
-#service .services-section .left {
-  padding-top: 400px;
+#service {
+  margin-top: 200px;
+
+  .services-section .left {
+    padding-top: 400px;
+  }
 
   .service {
     position: relative;
@@ -634,6 +648,7 @@ header {
       font-weight: 400;
       line-height: normal;
       text-align: right;
+      margin-bottom: 64px;
     }
     .description {
       font-size: 20px;

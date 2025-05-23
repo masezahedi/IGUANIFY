@@ -50,30 +50,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // گام 4: انیمیشن رنگ کلمات
-  tl.to(words, {
-    color: "#fff",
-    stagger: 0.1,
-    ease: "none",
-    onUpdate: function () {
-      const progress = this.progress();
-      const currentWordIndex = Math.floor(progress * words.length);
+  tl.to(
+    {},
+    {
+      duration: 1,
+      onUpdate: function () {
+        const progress = this.progress();
+        const currentWordIndex = Math.floor(progress * words.length);
 
-      // به ازای هر عکس، بررسی کن که باید ظاهر بشه یا نه
-      // فرض: عکس اول بعد از کلمه 12، دومی بعد از 24، سومی بعد از 36 مثلا
-      const triggerIndexes = [11, 42, 49];
+        words.forEach((word, index) => {
+          if (index <= currentWordIndex) {
+            word.style.color = "#ffffff"; // تیز، ناگهانی
+            word.style.fontWeight = "bold"; // اختیاری برای تاکید
+          } else {
+            word.style.color = "#383838";
+            word.style.fontWeight = "normal";
+          }
+        });
 
-      triggerIndexes.forEach((triggerIndex, i) => {
-        const img = images[i];
-        if (!img) return;
+        // کنترل تصاویر
+        const triggerIndexes = [11, 42, 49];
+        triggerIndexes.forEach((triggerIndex, i) => {
+          const img = images[i];
+          if (!img) return;
 
-        if (currentWordIndex >= triggerIndex) {
-          img.classList.add("visible");
-        } else {
-          img.classList.remove("visible");
-        }
-      });
-    },
-  });
+          if (currentWordIndex >= triggerIndex) {
+            img.classList.add("visible");
+          } else {
+            img.classList.remove("visible");
+          }
+        });
+      },
+    }
+  );
 
   // کدهای مربوط به لوتی
   const lottieContainer = document.getElementById("lottie-player");
