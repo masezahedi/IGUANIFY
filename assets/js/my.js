@@ -86,21 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // کدهای مربوط به لوتی
   const lottieContainer = document.getElementById("lottie-player");
-
-  let currentLottie = lottie.loadAnimation({
-    container: lottieContainer,
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "",
-  });
+  let currentLottie = null;
 
   function changeLottie(service) {
     const newAnim = service.getAttribute("data-animation");
-
     if (!newAnim) return;
 
-    currentLottie.destroy();
+    if (currentLottie) currentLottie.destroy();
+
     currentLottie = lottie.loadAnimation({
       container: lottieContainer,
       renderer: "svg",
@@ -108,11 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
       autoplay: true,
       path: newAnim,
     });
+
+    gsap.to(lottieContainer, { opacity: 1, duration: 0.5 });
   }
 
   const services = document.querySelectorAll(".service");
 
   services.forEach((service) => {
+    const title = service.querySelector(".title");
+
+    // 1. انیمیشن نمایش متن سرویس (fade + move up)
     gsap.fromTo(
       service,
       { opacity: 0, y: 30 },
@@ -122,13 +120,20 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.6,
         scrollTrigger: {
           trigger: service,
-          start: "top 45%",
+          start: "top 80%", // وقتی سرویس وارد دید شد
           toggleActions: "play none none reverse",
-          onEnter: () => changeLottie(service),
-          onEnterBack: () => changeLottie(service),
         },
       }
     );
+
+    // 2. نمایش لوتی فقط وقتی تایتل وسط ویوپورت می‌رسه
+    ScrollTrigger.create({
+      trigger: title,
+      start: "center center",
+      onEnter: () => changeLottie(service),
+      onEnterBack: () => changeLottie(service),
+      markers: true,
+    });
   });
 
   // کدهای مربوط به otherservices

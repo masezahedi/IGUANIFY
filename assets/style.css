@@ -499,8 +499,12 @@ header {
 }
 
 .lottie-container {
-  width: 400px;
-  height: 400px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-wrapper {
+  max-width: 450px;
 }
 
 /* OTHER SERVICES */
