@@ -109,16 +109,17 @@ header {
 
   .hero-button {
     z-index: 99999999999999999999999;
-    --glow-color: rgb(3, 224, 149);
-    --glow-spread-color: rgba(1, 224, 149, 1);
-    --enhanced-glow-color: rgb(0, 224, 149);
-    --btn-color: rgb(38, 50, 56);
+    /* --glow-color: rgb(3, 224, 149); */
+    /* --glow-spread-color: rgba(1, 224, 149, 1); */
+    /* --enhanced-glow-color: rgb(0, 224, 149); */
+    /* --btn-color: rgb(38, 50, 56); */
     border: 0.25em solid var(--glow-color);
     padding: 1em 3em;
     color: rgb(94, 255, 186);
     font-size: 18px;
     font-weight: bold;
-    background-color: var(--btn-color);
+    border: 3px solid var(--primary-color);
+    background: var(--background-secondary);
     border-radius: 5em;
     outline: none;
     /* box-shadow: 0 0 1em 0.25em var(--glow-color),
@@ -423,7 +424,7 @@ header {
     margin-top: 80px;
     font-size: 32px;
     font-weight: 400;
-    max-width: 1042px;
+    max-width: 1150px;
     color: #2d2d2d;
   }
 }
@@ -1072,4 +1073,52 @@ footer .footer-under-slugen {
 section .title {
   text-align: center;
   font-size: 42px;
+}
+
+
+
+
+/*** * MOUSE  * ***/
+.mouse-glow-halo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(70, 255, 150, 0.25) 0%, rgba(70, 255, 150, 0) 70%);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 9998;
+}
+
+/* --- CSS برای نشانگر موس سفارشی --- */
+.custom-cursor-outer-circle {
+  position: fixed;
+  top: 0; /* موقعیت اولیه، GSAP آن را تغییر می‌دهد */
+  left: 0; /* موقعیت اولیه، GSAP آن را تغییر می‌دهد */
+  width: 30px; /* عرض دایره بیرونی */
+  height: 30px; /* ارتفاع دایره بیرونی */
+  border: 2px solid white; /* استروک سفید */
+  border-radius: 50%; /* ایجاد دایره */
+  pointer-events: none; /* عدم دریافت رویدادهای موس */
+  opacity: 0; /* در ابتدا مخفی */
+  transform: translate(-50%, -50%); /* برای مرکزیت دقیق روی نشانگر */
+  z-index: 9999; /* بالاتر از هاله نور و سایر محتوا */
+  box-sizing: border-box; /* برای اینکه border به اندازه اضافه نکند */
+}
+
+.custom-cursor-inner-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px; /* عرض نقطه داخلی */
+  height: 6px; /* ارتفاع نقطه داخلی */
+  background-color: white; /* رنگ سفید برای نقطه */
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10000; /* بالاتر از دایره بیرونی */
 }
