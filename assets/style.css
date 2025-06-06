@@ -247,42 +247,6 @@ header {
   --blending: hard-light;
 }
 
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-
 .wrapper-background {
   position: absolute;
   top: -100px;
@@ -601,14 +565,15 @@ header {
   font-size: 32px;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 340px;
 }
 
 #service {
   margin-top: 200px;
 
   .services-section .left {
-    padding-top: 400px;
-  }
+    padding-top: 160px;
+      }
 
   .service {
     position: relative;
@@ -671,11 +636,11 @@ header {
 /*** otherServices ***/
 #otherServices .title {
   text-align: right;
-  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   font-size: 60px;
   font-weight: 950;
   line-height: 80px;
-  /* background: linear-gradient(
+  background: linear-gradient(
     233deg,
     #0f172a -24.33%,
     #1e293b -5.51%,
@@ -686,7 +651,7 @@ header {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
 
 #otherServices .description {
@@ -1073,52 +1038,4 @@ footer .footer-under-slugen {
 section .title {
   text-align: center;
   font-size: 42px;
-}
-
-
-
-
-/*** * MOUSE  * ***/
-.mouse-glow-halo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(70, 255, 150, 0.25) 0%, rgba(70, 255, 150, 0) 70%);
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
-  z-index: 9998;
-}
-
-/* --- CSS برای نشانگر موس سفارشی --- */
-.custom-cursor-outer-circle {
-  position: fixed;
-  top: 0; /* موقعیت اولیه، GSAP آن را تغییر می‌دهد */
-  left: 0; /* موقعیت اولیه، GSAP آن را تغییر می‌دهد */
-  width: 30px; /* عرض دایره بیرونی */
-  height: 30px; /* ارتفاع دایره بیرونی */
-  border: 2px solid white; /* استروک سفید */
-  border-radius: 50%; /* ایجاد دایره */
-  pointer-events: none; /* عدم دریافت رویدادهای موس */
-  opacity: 0; /* در ابتدا مخفی */
-  transform: translate(-50%, -50%); /* برای مرکزیت دقیق روی نشانگر */
-  z-index: 9999; /* بالاتر از هاله نور و سایر محتوا */
-  box-sizing: border-box; /* برای اینکه border به اندازه اضافه نکند */
-}
-
-.custom-cursor-inner-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 6px; /* عرض نقطه داخلی */
-  height: 6px; /* ارتفاع نقطه داخلی */
-  background-color: white; /* رنگ سفید برای نقطه */
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  z-index: 10000; /* بالاتر از دایره بیرونی */
 }
