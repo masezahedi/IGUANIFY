@@ -559,7 +559,7 @@ h2 {
   font-size: 60px;
   font-weight: 950;
   line-height: 80px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     233deg,
     #0f172a -24.33%,
     #1e293b -5.51%,
@@ -570,7 +570,7 @@ h2 {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 #otherServices .description {
@@ -749,7 +749,7 @@ h2 {
   animation: none;
   opacity: 0;
 }
-
+/* 
 .card-special::before {
   content: "";
   width: 100.5%;
@@ -798,6 +798,57 @@ h2 {
   100% {
     --rotate: 360deg;
   }
+} */
+
+
+#pricing .card-special::before {
+  content: "";
+  position: absolute;
+  inset: -1.25%; /* کمی بزرگتر از کارت اصلی برای ایجاد حاشیه */
+  border-radius: 32px; /* همانند کارت اصلی */
+  background: linear-gradient(
+    var(--rotate), /* این متغیر توسط جاوااسکریپت (GSAP) کنترل می‌شود */
+    #5ddcff, /* رنگ‌های گرادینت */
+    #3c67e3 43%,
+    var(--primary-color)
+  );
+  z-index: -1; /* اطمینان از اینکه زیر محتوای کارت باشد */
+  opacity: 1; /* حالت عادی: قابل مشاهده */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* انیمیشن نرم برای محو شدن و تغییر اندازه */
+  /* انیمیشن چرخش را از اینجا حذف می‌کنیم، زیرا GSAP آن را مدیریت می‌کند */
+}
+
+
+#pricing .card-special::after {
+  content: "";
+  position: absolute;
+  inset: -1.25%; /* همانند ::before */
+  border-radius: 32px; /* همانند کارت اصلی */
+  background: linear-gradient(
+    var(--rotate), /* این هم می‌تواند بچرخد */
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  filter: blur(calc(var(--card-height) / 8)); /* بلور برای افکت درخشش */
+  z-index: -2; /* زیر ::before */
+  opacity: 0.7; /* شفافیت کمتر */
+  transition: opacity 0.5s ease-in-out; /* انیمیشن نرم برای محو شدن */
+  /* انیمیشن چرخش را از اینجا حذف می‌کنیم، GSAP آن را مدیریت می‌کند */
+}
+
+
+#pricing .card-special:hover::before,
+#pricing .card-special:hover::after {
+  opacity: 0; /* بوردر و سایه محو می‌شوند */
+  /* اگر می‌خواهید کمی کوچکتر هم بشوند، می‌توانید transform: scale(0.98); را هم اضافه کنید */
+  transform: scale(0.98);
+}
+
+#pricing .card-special:hover {
+  background-color: var(--background-dark) !important; /* رنگ مشکی کامل، !important برای غلبه بر اولویت‌ها */
+  color: var(--text-primary) !important; /* تغییر رنگ متن به سفید یا رنگ دلخواه دیگر */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; /* انیمیشن نرم برای تغییر رنگ کارت و متن */
 }
 
 /*** FOOTER ***/
@@ -959,5 +1010,9 @@ footer .footer-under-slugen {
 section .title {
   text-align: center;
   font-size: 42px;
-  font-family: IG;
+  font-family: "IG";
+}
+
+section#why .title { 
+  font-family: "IG";
 }

@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        const triggerIndexes = [11, 42, 49]; // این اندیس‌ها را بر اساس موقعیت عکس‌ها در متن تنظیم کنید
+        const triggerIndexes = [10, 41, 48]; // این اندیس‌ها را بر اساس موقعیت عکس‌ها در متن تنظیم کنید
         images.forEach((img, i) => { // تغییر برای استفاده صحیح از images
           if (!img) return;
           const triggerIndex = triggerIndexes[i];
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: serviceSection, // تریگر: شروع بخش سرویس‌ها
-          start: "top bottom-=150px", // شروع انیمیشن وقتی بالای بخش سرویس‌ها ۱۵۰ پیکسل از پایین صفحه فاصله دارد
+          start: "top bottom-=90px", // شروع انیمیشن وقتی بالای بخش سرویس‌ها ۱۵۰ پیکسل از پایین صفحه فاصله دارد
           end: "top center",    // پایان انیمیشن وقتی بالای بخش سرویس‌ها به مرکز صفحه می‌رسد
           scrub: 1.5,              // اتصال نرم انیمیشن به اسکرول
           once: true,             // این انیمیشن فقط یک بار اجرا شود
@@ -449,3 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   } // انتهای شرط if (همه عناصر وجود دارند)
 });
+
+
+
+
